@@ -9,6 +9,6 @@ import net.fabricmc.api.Environment;
 public class AMSBClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        AMSB.LOGGER.info("AntiMSBan has been initialized client-side. Servers will need this mod if your are banned and want to join.");
+        AMSB.LOGGER.info("AntiMSBan has been initialized client-side. Any server that you join will require this mod.");
     }
 }
