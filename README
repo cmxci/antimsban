@@ -1,5 +1,5 @@
-This is a fabric mod to ignore the global ban ystem. It must be installed on both the client and the server to ignore bans, but vanilla clients will be able to connect to a server running this mod. A client running this mod will not be able to connect to a server without this mod.
+This is a fabric mod to ignore the global ban system. It must be installed on both the client and the server to ignore bans, but vanilla clients will be able to connect to a server running this mod. A client running this mod will not be able to connect to a server without this mod.
 
 This mod works by sending the information used by the client for authentication to the server. The server then authenticates as a client, ignoring any ban or insufficient privilege errors. This mod is not secure because servers will unavoidably have the opportunity to steal access tokens (because they have to be sent to the auth server decrypted), and this implementation is vulnerable to man-in-the-middle attacks.
 
-This mod has recieved very little testing. I know that both the client and server start, but that's about it.
+This mod has recieved very little testing. I know that both the client and server start, but that's about it. I'll get to testing connections at some point. I assume that nobody wants to get banned for testing purposes, so we'll have to wait and see if it actually works.
