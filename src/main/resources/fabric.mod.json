@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "antimsban",
+  "version": "${version}",
+  "name": "AntiMSBan",
+  "description": "Allows globally banned players to join servers. NOT SECURE. THE SERVER CAN STEAL YOUR AUTH TOKEN. Also DEFINITELY suceptible to man-in-the-middle attacks.",
+  "authors": [
+    "cmxci"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/antimsban/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "cmxci.antimsban.client.AMSBClient"
+    ],
+    "main": [
+      "cmxci.antimsban.AMSB"
+    ]
+  },
+  "mixins": [
+    "antimsban.mixins.json"
+  ],
+  "accessWidener": "amsb.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.14.8",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}

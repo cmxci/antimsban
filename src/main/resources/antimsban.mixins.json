@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cmxci.antimsban.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ServerLoginNetworkHandlerAnonymousInnerMixin",
+    "ServerLoginNetworkHandlerMixin"
+  ],
+  "client": [
+    "ClientLoginNetworkHandlerMixin",
+    "ConnectScreenAnonymousInnerMixin",
+    "MinecraftClientMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
