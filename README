@@ -4,4 +4,4 @@ This mod works by sending the information used by the client for authentication 
 
 This mod is not secure because servers will unavoidably have the opportunity to steal access tokens (because they have to be sent to the auth server decrypted), and this implementation is vulnerable to man-in-the-middle attacks.
 
-This mod has recieved very little testing. I know that both the client and server start, but that's about it. I'll get to testing connections at some point. I assume that nobody wants to get banned for testing purposes, so we'll have to wait and see if it actually works.
+This mod has recieved very little testing. I only know that an unbanned client can connect to a server. I assume that nobody wants to get banned for testing purposes, so we'll have to wait and see if it actually works.

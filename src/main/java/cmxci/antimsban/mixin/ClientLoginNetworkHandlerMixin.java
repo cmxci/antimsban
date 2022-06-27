@@ -1,7 +1,6 @@
 package cmxci.antimsban.mixin;
 
 import cmxci.antimsban.AMSB;
-import cmxci.antimsban.duck.ClientLoginNetworkHandlerDuck;
 import com.mojang.authlib.exceptions.*;
 import com.mojang.authlib.minecraft.MinecraftSessionService;
 import net.fabricmc.api.EnvType;
@@ -18,16 +17,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ClientLoginNetworkHandler.class)
 @Environment(EnvType.CLIENT)
-public class ClientLoginNetworkHandlerMixin implements ClientLoginNetworkHandlerDuck {
+public class ClientLoginNetworkHandlerMixin {
     @Final
     @Shadow
     private MinecraftClient client;
 
-    private String serverId;
-
     @Inject(at = @At("HEAD"), method = "joinServerSession", cancellable = true)
     public void joinServerSession(String serverId, CallbackInfoReturnable<Text> cir) {
-        this.serverId = serverId;
         try {
             assert this.getSessionService() != null;
             this.getSessionService().joinServer(this.client.getSession().getProfile(), this.client.getSession().getAccessToken(), serverId);
@@ -50,9 +46,5 @@ public class ClientLoginNetworkHandlerMixin implements ClientLoginNetworkHandler
     @Shadow
     private MinecraftSessionService getSessionService() {
         return null;
-    }
-
-    public String amsb$getServerId() {
-        return this.serverId;
     }
 }
