@@ -119,3 +119,6 @@ run/
 
 # mcdev
 src/test/
+
+# get your windows shit out of here
+gradlew.bat
